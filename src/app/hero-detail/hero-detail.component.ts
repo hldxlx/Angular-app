@@ -23,6 +23,7 @@ export class HeroDetailComponent implements OnInit {
     this.getHero();
   }
   getHero(): void {
+    //+ 号   把id转成数字
     const id = +this.route.snapshot.paramMap.get('id');
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
